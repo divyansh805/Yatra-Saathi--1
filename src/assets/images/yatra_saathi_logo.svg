@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 220" fill="none">
+  <!-- Clean light/white background -->
+  <rect width="100%" height="100%" fill="#FFFFFF" rx="16" />
+
+  <defs>
+    <!-- Gradients for Pin & Accents -->
+    <linearGradient id="ysPinOuterSweep" x1="25" y1="160" x2="140" y2="25" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0072CE" />
+      <stop offset="45%" stopColor="#0094F2" />
+      <stop offset="100%" stopColor="#00B4D8" />
+    </linearGradient>
+
+    <linearGradient id="ysPinBody" x1="45" y1="30" x2="140" y2="195" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0077D7" />
+      <stop offset="55%" stopColor="#0052A3" />
+      <stop offset="100%" stopColor="#00337A" />
+    </linearGradient>
+
+    <linearGradient id="ysSunGlow" x1="95" y1="55" x2="95" y2="115" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#FFB703" />
+      <stop offset="50%" stopColor="#FB8500" />
+      <stop offset="100%" stopColor="#F97316" />
+    </linearGradient>
+
+    <linearGradient id="ysMountainMain" x1="70" y1="90" x2="120" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0088EA" />
+      <stop offset="100%" stopColor="#005B9E" />
+    </linearGradient>
+
+    <linearGradient id="ysMountainRight" x1="105" y1="100" x2="140" y2="145" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0066B3" />
+      <stop offset="100%" stopColor="#003F7A" />
+    </linearGradient>
+
+    <!-- Clip Path for the interior of the Pin -->
+    <clipPath id="ysPinInnerClip">
+      <path d="M96 32 C54 32 30 66 30 108 C30 144 60 178 96 210 C132 178 162 144 162 108 C162 66 138 32 96 32 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- ==================== LEFT: PIN EMBLEM ==================== -->
+  <g id="ysEmblem" transform="translate(10, 0)">
+    <!-- Dynamic Top-Left Outer Crescent Swoosh -->
+    <path
+      d="M44 148 C32 122 30 88 44 60 C59 31 90 20 122 23 C138 25 152 32 160 38 C146 30 124 26 105 27 C75 29 49 46 39 74 C30 96 32 125 44 148 Z"
+      fill="url(#ysPinOuterSweep)"
+    />
+
+    <!-- Main Pin Base & Body -->
+    <path
+      d="M96 32 C54 32 30 66 30 108 C30 144 60 178 96 210 C132 178 162 144 162 108 C162 66 138 32 96 32 Z"
+      fill="url(#ysPinBody)"
+    />
+
+    <!-- Interior Content Masked to Pin -->
+    <g clip-path="url(#ysPinInnerClip)">
+      <!-- Golden Sun -->
+      <circle cx="96" cy="98" r="35" fill="url(#ysSunGlow)" />
+
+      <!-- Left / Main Mountain Peak -->
+      <polygon points="96,78 58,146 134,146" fill="url(#ysMountainMain)" />
+      <!-- Left Peak Snow Cap -->
+      <polygon points="96,78 83,103 90,99 96,104 103,99 109,103" fill="#FFFFFF" />
+
+      <!-- Right Mountain Peak -->
+      <polygon points="124,96 98,146 152,146" fill="url(#ysMountainRight)" />
+      <!-- Right Peak Snow Cap -->
+      <polygon points="124,96 115,113 121,110 124,114 130,110 135,113" fill="#FFFFFF" />
+
+      <!-- Lower Deep Blue Rolling Hills -->
+      <path
+        d="M28 135 Q54 125 84 133 Q114 142 164 127 L164 215 L28 215 Z"
+        fill="#08254A"
+      />
+
+      <!-- Winding White Road (S-curve broadening towards viewer) -->
+      <path
+        d="M97 127 
+           C102 127, 109 130, 111 135 
+           C113 142, 101 145, 89 149 
+           C74 154, 67 163, 72 174 
+           C77 184, 94 192, 103 205
+           L89 205
+           C79 192, 62 182, 59 171
+           C54 157, 67 145, 82 142 
+           C94 139, 101 135, 99 130 
+           C97 128, 94 127, 92 127 Z"
+        fill="#FFFFFF"
+      />
+
+      <!-- Compass at Bottom Tip -->
+      <g transform="translate(96, 172)">
+        <!-- Compass Outer Circle -->
+        <circle cx="0" cy="0" r="19" stroke="#FFFFFF" stroke-width="3" fill="#0A2540" />
+
+        <!-- Compass Directional Needle (Pointing NW ~ 315 deg) -->
+        <g transform="rotate(-45)">
+          <!-- Top North Needle (White) -->
+          <polygon points="0,-13 3.5,0 0,-1.5 -3.5,0" fill="#FFFFFF" />
+          <polygon points="0,-13 0,-1.5 3.5,0" fill="#E2E8F0" />
+          <!-- Bottom South Needle (Azure / cyan) -->
+          <polygon points="0,13 3.5,0 0,1.5 -3.5,0" fill="#38BDF8" />
+          <polygon points="0,13 0,1.5 3.5,0" fill="#0284C7" />
+        </g>
+        <!-- Center Pivot Dot -->
+        <circle cx="0" cy="0" r="2.5" fill="#FFFFFF" />
+      </g>
+    </g>
+
+    <!-- White Contrail swooping to airplane -->
+    <path
+      d="M136 50 C146 45 158 40 172 38"
+      stroke="#FFFFFF"
+      stroke-width="2"
+      stroke-linecap="round"
+      opacity="0.8"
+    />
+
+    <!-- Top-Right Airplane Taking Off (Vivid Blue Jet heading NE ~ 38deg) -->
+    <g transform="translate(162, 44) rotate(32) scale(0.9)">
+      <path
+        d="M0 -17 
+           C1 -17, 3 -14, 3 -9
+           L3 -3
+           L17 7
+           L17 10
+           L3 6
+           L3 15
+           L8 20
+           L8 22
+           L0 21
+           L-8 22
+           L-8 20
+           L-3 15
+           L-3 6
+           L-17 10
+           L-17 7
+           L-3 -3
+           L-3 -9
+           C-3 -14, -1 -17, 0 -17 Z"
+        fill="#0084E6"
+      />
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT: Yatra-Saathi WORDMARK ==================== -->
+  <g id="ysWordmark" transform="translate(200, 0)">
+    <!-- "Yatra" in Deep Navy Bold -->
+    <text
+      x="12"
+      y="136"
+      fill="#0A2540"
+      font-family="'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      font-size="76"
+      font-weight="800"
+      letter-spacing="-1.2"
+    >
+      Yatra
+    </text>
+
+    <!-- Vibrant Orange Hyphen Pill "-" -->
+    <!-- Positioned precisely between Yatra and Saathi at lowercase center -->
+    <rect
+      x="214"
+      y="107"
+      width="25"
+      height="12"
+      rx="3.5"
+      fill="#F97316"
+    />
+
+    <!-- "Saathi" in Electric Cyan-Blue Bold -->
+    <text
+      x="248"
+      y="136"
+      fill="#0084E6"
+      font-family="'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      font-size="76"
+      font-weight="800"
+      letter-spacing="-1.2"
+    >
+      Saathi
+    </text>
+  </g>
+</svg>

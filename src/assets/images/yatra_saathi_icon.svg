@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 270" fill="none">
+  <defs>
+    <!-- Gradients for Pin & Accents -->
+    <linearGradient id="ysPinOuterSweep" x1="30" y1="200" x2="160" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0072CE" />
+      <stop offset="40%" stopColor="#0094F2" />
+      <stop offset="100%" stopColor="#00B4D8" />
+    </linearGradient>
+
+    <linearGradient id="ysPinBody" x1="50" y1="40" x2="160" y2="245" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0077D7" />
+      <stop offset="55%" stopColor="#0052A3" />
+      <stop offset="100%" stopColor="#00337A" />
+    </linearGradient>
+
+    <linearGradient id="ysSunGlow" x1="110" y1="70" x2="110" y2="145" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#FF9E00" />
+      <stop offset="60%" stopColor="#FF7700" />
+      <stop offset="100%" stopColor="#E85D04" />
+    </linearGradient>
+
+    <linearGradient id="ysMountainMain" x1="80" y1="110" x2="140" y2="175" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0088EA" />
+      <stop offset="100%" stopColor="#005B9E" />
+    </linearGradient>
+
+    <linearGradient id="ysMountainRight" x1="120" y1="120" x2="160" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0066B3" />
+      <stop offset="100%" stopColor="#003F7A" />
+    </linearGradient>
+
+    <!-- Clip Path for the interior of the Pin -->
+    <clipPath id="ysPinInnerClip">
+      <path d="M110 38 C60 38 32 78 32 128 C32 172 68 212 110 252 C152 212 188 172 188 128 C188 78 160 38 110 38 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- ==================== STANDALONE PIN EMBLEM ==================== -->
+  <g id="ysEmblem" transform="translate(10, 4)">
+    <!-- Dynamic Top-Left Outer Crescent Swoosh -->
+    <path
+      d="M48 175 C34 145 32 105 48 72 C66 38 102 24 140 28 C158 30 174 38 184 46 C168 36 142 32 120 33 C84 35 54 55 42 88 C32 114 34 148 48 175 Z"
+      fill="url(#ysPinOuterSweep)"
+    />
+
+    <!-- Main Pin Base & Body with clean boundary -->
+    <path
+      d="M110 38 C60 38 32 78 32 128 C32 172 68 212 110 252 C152 212 188 172 188 128 C188 78 160 38 110 38 Z"
+      fill="url(#ysPinBody)"
+      stroke="#FFFFFF"
+      stroke-width="1.2"
+    />
+
+    <!-- Interior Content Masked to Pin -->
+    <g clip-path="url(#ysPinInnerClip)">
+      <!-- Golden Sun -->
+      <circle cx="110" cy="116" r="42" fill="url(#ysSunGlow)" />
+
+      <!-- Left / Main Mountain Peak -->
+      <polygon points="110,92 64,175 156,175" fill="url(#ysMountainMain)" />
+      <!-- Left Peak Snow Cap -->
+      <polygon points="110,92 94,122 103,118 110,123 118,117 126,122" fill="#FFFFFF" />
+
+      <!-- Right Mountain Peak -->
+      <polygon points="144,114 112,175 178,175" fill="url(#ysMountainRight)" />
+      <!-- Right Peak Snow Cap -->
+      <polygon points="144,114 133,135 140,132 144,136 151,131 157,135" fill="#FFFFFF" />
+
+      <!-- Lower Deep Blue Rolling Hills -->
+      <path
+        d="M30 162 Q60 150 95 160 Q130 170 190 152 L190 260 L30 260 Z"
+        fill="#08254A"
+      />
+
+      <!-- Winding White Road (S-curve broadening towards viewer) -->
+      <path
+        d="M112 152 
+           C118 152, 126 156, 128 162 
+           C130 170, 116 174, 102 178 
+           C84 184, 76 195, 82 208 
+           C88 220, 108 230, 118 245
+           L102 245
+           C90 230, 70 218, 66 204
+           C60 188, 76 174, 94 170
+           C108 166, 116 162, 114 156
+           C112 154, 108 152, 106 152 Z"
+        fill="#FFFFFF"
+      />
+
+      <!-- Compass at Bottom Tip -->
+      <g transform="translate(110, 206)">
+        <!-- Compass Outer Circle -->
+        <circle cx="0" cy="0" r="23" stroke="#FFFFFF" stroke-width="3.5" fill="#0A2540" />
+
+        <!-- Compass Directional Needle (Pointing NW ~ 315 deg) -->
+        <g transform="rotate(-45)">
+          <!-- Top North Needle (White) -->
+          <polygon points="0,-16 4,0 0,-2 -4,0" fill="#FFFFFF" />
+          <polygon points="0,-16 0,-2 4,0" fill="#E2E8F0" />
+          <!-- Bottom South Needle (Azure / cyan) -->
+          <polygon points="0,16 4,0 0,2 -4,0" fill="#38BDF8" />
+          <polygon points="0,16 0,2 4,0" fill="#0284C7" />
+        </g>
+        <!-- Center Pivot Dot -->
+        <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+      </g>
+    </g>
+
+    <!-- Top-Right Airplane Taking Off (Navy silhouette heading NE ~ 45deg with clean crisp outline) -->
+    <g transform="translate(182, 60) rotate(24) scale(0.95)">
+      <!-- Airplane Fuselage & Wings -->
+      <path
+        d="M0 -18 
+           C1 -18, 3 -15, 3 -10
+           L3 -4
+           L18 7
+           L18 11
+           L3 7
+           L3 17
+           L9 22
+           L9 25
+           L0 23
+           L-9 25
+           L-9 22
+           L-3 17
+           L-3 7
+           L-18 11
+           L-18 7
+           L-3 -4
+           L-3 -10
+           C-3 -15, -1 -18, 0 -18 Z"
+        fill="#0A2540"
+        stroke="#FFFFFF"
+        stroke-width="1.2"
+        stroke-linejoin="round"
+      />
+    </g>
+  </g>
+</svg>

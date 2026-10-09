@@ -1,0 +1,8 @@
+{
+  "name": "Yatra Saathi",
+  "description": "Travel smarter. Prepare better. Journey with confidence. Modern travel assistance platform providing destination preparation, stay insights, travel verification, and checklists.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
